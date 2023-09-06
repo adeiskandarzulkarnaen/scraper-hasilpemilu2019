@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Yii console bootstrap file.
+ */
+
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
+
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
+
+$config = [
+    'id' => 'scrapper',
+    'basePath' => __DIR__,
+    'controllerNamespace' => 'app\commands',
+    'components' => [
+        'db' => [
+            'charset' => 'utf8',
+            'class' => 'yii\db\Connection',
+            // 'dsn' => 'mysql:host=149.129.35.181;dbname=indovoters','username' => 'digiremote','password' => 'digiRemote2020#',
+            'dsn' => 'mysql:host=172.17.0.1;dbname=indovoters','username' => 'root','password' => 'root',
+        ]
+    ]
+];
+
+$application = new yii\console\Application($config);
+$exitCode = $application->run();
+exit($exitCode);

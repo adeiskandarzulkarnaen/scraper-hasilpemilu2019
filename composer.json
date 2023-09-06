@@ -1,0 +1,15 @@
+{
+    "require": {
+        "yiisoft/yii2": "^2",
+        "kriswallsmith/buzz": "^1.2",
+        "nyholm/psr7": "^1.5"
+    },
+    "autoload": {
+        "app\\": "./"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
